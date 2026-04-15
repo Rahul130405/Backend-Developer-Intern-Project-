@@ -17,6 +17,18 @@ It focuses on:
 
 ---
 
+## 📸 Screenshots
+
+| Login Page | Register Page |
+| :---: | :---: |
+| ![Login Page](./screenshots/login.png) | ![Register Page](./screenshots/register.png) |
+
+| Dashboard |
+| :---: |
+| ![Dashboard](./screenshots/dashboard.png) |
+
+---
+
 ## 🔐 Core Features
 
 ### 🧑‍💻 Authentication & Authorization
