@@ -1,85 +1,190 @@
-# 🚀 Professional Task Management System
+# 🚀 PrimetradeAI Backend Developer Internship Assignment
 
-A production-ready Task Management system built for a Backend Developer Internship assignment. This project has been enhanced with professional-grade features to demonstrate senior-level engineering principles.
+> **Secure. Scalable. Production-Ready.**
+> A full-stack backend system built with modern best practices, featuring authentication, role-based access control, and clean API architecture.
 
-## ✨ Stand-Out Features
-- **Interactive API Documentation:** Integrated **Swagger UI** for easy API testing.
-- **Enhanced Security:**
-  - **Helmet:** Secure HTTP headers.
-  - **XSS Protection:** Sanitization of user input to prevent cross-site scripting.
-  - **NoSQL Injection Prevention:** Sanitizing MongoDB queries.
-- **Advanced Querying:** Support for **Pagination, Filtering (by status), and Sorting** on the backend.
-- **Functional Depth:** Tasks now support **Priority levels** (Low, Medium, High) and **Status toggling**.
-- **Modern UX:**
-  - **Toast Notifications:** Real-time feedback using `react-hot-toast`.
-  - **Loading States:** Smooth user experience during data fetching.
-  - **Responsive Design:** Professional, clean UI inspired by modern SaaS applications.
-- **Role-Based Access Control (RBAC):** Strict separation between `user` and `admin` capabilities.
+---
 
-## 🛠 Tech Stack
-- **Backend:** Node.js, Express.js, MongoDB (Mongoose)
-- **Security:** JWT, bcryptjs, Helmet, XSS-Clean, Mongo-Sanitize
-- **Documentation:** Swagger/OpenAPI 3.0
-- **Frontend:** React.js, Axios, React-Hot-Toast
+## 🌟 Overview
+
+This project demonstrates the design and implementation of a **secure, scalable RESTful API** with a minimal frontend interface for interaction.
+
+It focuses on:
+
+* Robust authentication & authorization
+* Clean architecture & modular design
+* Production-level coding standards
+
+---
+
+## 🔐 Core Features
+
+### 🧑‍💻 Authentication & Authorization
+
+* User Registration & Login
+* Password hashing using **bcrypt**
+* JWT-based authentication
+* Role-based access control (**User / Admin**)
+
+---
+
+### 📦 REST API (Task Management)
+
+* Create, Read, Update, Delete tasks
+* User-specific data isolation
+* Admin-restricted actions
+* Fully protected routes
+
+---
+
+### 🛡️ Security Implementation
+
+* Secure JWT handling
+* Input validation & sanitization
+* Protected API endpoints
+* Environment-based configuration
+
+---
+
+### ⚙️ Backend Engineering
+
+* RESTful API design
+* Proper HTTP status codes
+* Centralized error handling
+* API versioning (`/api/v1`)
+* Scalable folder structure
+
+---
+
+### 🌐 Frontend (React)
+
+* User Registration & Login UI
+* JWT-based session handling
+* Protected dashboard
+* Task CRUD integration
+* Real-time API response feedback
+
+---
+
+## 🧰 Tech Stack
+
+| Layer    | Technology          |
+| -------- | ------------------- |
+| Backend  | Node.js, Express.js |
+| Database | MongoDB (Mongoose)  |
+| Auth     | JWT, bcrypt         |
+| Frontend | React.js            |
+| Tools    | Postman             |
 
 ---
 
 ## 📂 Project Structure
-```
-/
-├── backend/
-│   ├── config/          # Database & App config
-│   ├── controllers/     # Business logic (Lean controllers)
-│   ├── middleware/      # Security, Auth, & Global Error Handling
-│   ├── models/          # Mongoose Schemas with Validation
-│   ├── routes/          # RESTful routes with Swagger documentation
-│   └── server.js        # Server entry point with security middleware
-├── frontend/
-│   ├── src/
-│   │   ├── components/  # Modular UI components
-│   │   ├── pages/       # Page-level components
-│   │   ├── services/    # Abstracted API & Auth services
-│   │   └── App.js       # Global state & Routing
-└── README.md            # Comprehensive documentation
+
+```bash
+backend/
+ ├── controllers/
+ ├── models/
+ ├── routes/
+ ├── middleware/
+ ├── config/
+ └── server.js
+
+frontend/
+ ├── src/
+ └── public/
 ```
 
 ---
 
-## 🚦 Getting Started
+## ⚡ Getting Started
 
-### 1. Prerequisites
-- Node.js (v16+)
-- MongoDB Atlas account or local installation
+### 🔧 Backend Setup
 
-### 2. Backend Setup
-1. `cd backend`
-2. `npm install`
-3. Create `.env` with:
-   ```env
-   PORT=5000
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_super_secret_key
-   NODE_ENV=development
-   ```
-4. `npm start`
-5. **API Documentation:** View and test the API at `http://localhost:5000/api-docs`
-
-### 3. Frontend Setup
-1. `cd frontend`
-2. `npm install`
-3. `npm start`
-4. Access the app at `http://localhost:3000`
+```bash
+cd backend
+npm install
+npm start
+```
 
 ---
 
-## 📈 Scalability & Future Roadmap
-This architecture is designed to scale:
-1. **Caching:** Integrate Redis to cache task lists and reduce database hits.
-2. **Microservices:** The authentication and task logic can be decoupled into independent services.
-3. **Automated Testing:** Expand the project with Jest and Supertest for TDD.
-4. **CI/CD:** Deploy via GitHub Actions to AWS or Vercel.
+### 🌐 Frontend Setup
 
-## 🛡 Security Highlights
-- **JWT:** Stateless authentication with tokens stored securely in the frontend.
-- **Data Sanitization:** Every input is cleaned before reaching the database.
-- **RBAC:** Admins have exclusive rights to delete resources, protecting data integrity.
+```bash
+cd frontend
+npm install
+npm start
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file inside backend:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## 📬 API Endpoints
+
+### 🔐 Auth
+
+* `POST /api/v1/auth/register`
+* `POST /api/v1/auth/login`
+
+### 📦 Tasks
+
+* `GET /api/v1/tasks`
+* `POST /api/v1/tasks`
+* `PUT /api/v1/tasks/:id`
+* `DELETE /api/v1/tasks/:id` *(Admin only)*
+
+---
+
+## 📊 Scalability & Future Improvements
+
+This system is designed with scalability in mind:
+
+* 🔹 Microservices-ready architecture
+* 🔹 Redis caching integration (future scope)
+* 🔹 Load balancing via Nginx
+* 🔹 Docker-based deployment support
+* 🔹 Logging & monitoring (Winston, Prometheus)
+
+---
+
+## 🧠 Engineering Highlights
+
+* Clean & modular code structure
+* Separation of concerns
+* Secure authentication flow
+* Production-ready API design
+* Easily extendable for new features
+
+---
+
+## 🎯 Why This Project Stands Out
+
+✔ Follows **industry-level backend practices**
+✔ Implements **real-world authentication & authorization**
+✔ Designed with **scalability & security in mind**
+✔ Demonstrates **full-stack integration**
+
+---
+
+## 👨‍💻 Author
+
+**Rahul Raj Jaiswal**
+Backend Developer | Problem Solver | Tech Enthusiast
+
+---
+
+## ⭐ Final Note
+
+> This project is not just an assignment—
+> it reflects my approach to building **secure, scalable, and production-ready systems**.
