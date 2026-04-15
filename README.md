@@ -19,11 +19,11 @@ It focuses on:
 
 ## 📸 Screenshots
 
-| Login Page | Dashboard |
+| Login Page | Register Page |
 | :---: | :---: |
 | ![Login Page](./screenshots/login.png) | ![Dashboard](./screenshots/dashboard.png) |
 
-| Register Page |
+| Dashboard |
 | :---: |
 | ![Register Page](./screenshots/register.png) |
 
